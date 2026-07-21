@@ -1,0 +1,351 @@
+ nav {
+            margin-bottom: 100px;
+        }
+
+        nav ul {
+            font-size: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            width: 50px;
+            background-color: gray;
+            margin: 0 0;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            font-size: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        #home {
+            background-color: green;
+            border-top-left-radius: 15%;
+            border-bottom-left-radius: 15%;
+        }
+
+        #delete {
+            border-top-right-radius: 15%;
+            border-bottom-right-radius: 15%;
+        }
+
+        nav ul li:hover {
+            background-color: green;
+        }
+
+        #chip {
+            display: inline-block;
+            background-color: rgb(240, 238, 238);
+            border-radius: 40px;
+            padding: 10px;
+            white-space: nowrap;
+            margin-left: 50px;
+            margin-bottom: 100px;
+        }
+
+        #image {
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            border-radius: 40px;
+            vertical-align: middle;
+        }
+
+        #content {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        #close {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            vertical-align: middle;
+            width: 130px;
+            overflow: hidden;
+            transition: width 0.5s ease;
+        }
+
+        #x {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            font-weight: bolder;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        #fan {
+            margin-bottom: 100px;
+        }
+
+        #fan input {
+            display: none;
+        }
+
+        .fan-btn {
+            border: 2px solid black;
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            user-select: none;
+        }
+
+        #controle {
+            margin-top: 50px;
+            margin-left: 80px;
+        }
+
+        #fan-img {
+            display: inline-block;
+            width: 250px;
+            height: 200px;
+            margin-left: 120px;
+        }
+
+        #fan-img img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            animation: spin 1.5s linear infinite;
+            animation-play-state: paused;
+            transform-origin: center;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rspin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        #on:checked~#fan-img img {
+            animation-play-state: running;
+        }
+
+        #off:checked~#fan-img img {
+            animation-play-state: paused;
+        }
+
+        #s1:checked~#fan-img img {
+            animation-duration: 1s;
+        }
+
+        #s2:checked~#fan-img img {
+            animation-duration: 0.5s;
+        }
+
+        #s3:checked~#fan-img img {
+            animation-duration: 0.2s;
+        }
+
+        #r:checked~#fan-img img {
+            animation-name: rspin;
+        }
+
+        #heart {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        #heart img {
+            margin-left: 675px;
+            width: 150px;
+            height: 130px;
+            animation: paluse 0.8s linear 0.5s infinite;
+        }
+
+        @keyframes paluse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .face {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+        }
+
+        svg circle,
+        svg path {
+            transition: fill 0.3s, stroke 0.3s;
+        }
+
+        svg .eyes circle:nth-child(1):hover {
+            fill: blue;
+            cursor: pointer;
+        }
+
+        svg .eyes circle:nth-child(2):hover {
+            fill: blue;
+            cursor: pointer;
+        }
+
+        svg path:hover {
+            stroke: green !important;
+            cursor: pointer;
+        }
+
+        .c {
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px 12px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-5px);
+            white-space: nowrap;
+        }
+
+        .c::before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            height: 1px;
+            top: 50%;
+        }
+
+        .face:has(.eyes circle:nth-child(1):hover) #leye {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #leye {
+            top: 140px;
+            left: -60px;
+        }
+
+        #leye::before {
+            width: 60px;
+            right: -60px;
+        }
+
+        .face:has(.eyes circle:nth-child(2):hover) #reye {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #reye {
+            top: 140px;
+            left: 310px;
+        }
+
+        #reye::before {
+            width: 60px;
+            left: -60px;
+        }
+
+        .face:has(path:hover) #mouth {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #mouth {
+            top: 260px;
+            left: 310px;
+        }
+
+        #mouth::before {
+            width: 50px;
+            left: -50px;
+        }
+
+        .canvas-wrapper {
+            position: relative;
+            height: 350px;
+            width: 450px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            height: 100%;
+            width: 100%;
+            padding-right: 10px;
+            background-color: gray;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        .drop-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+        }
+
+        #imgs {
+            padding: 15px;
+            min-height: 80px;
+            width: fit-content;
+        }
+
+        #imgs img,
+        .drop-zone img {
+            height: 75px;
+            width: 75px;
+            cursor: grab;
+        }
+
+        .counter {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .color-buttons
+        {
+            margin-top: 20pxpx;
+            margin-bottom: 20px;
+            margin-left: 180px;
+        }
+        .color-buttons #red
+        {
+            background-color: red;
+        }
+        .color-buttons #blue
+        {
+            background-color: rgb(95, 95, 255);
+        }
+        .color-buttons #gray
+        {
+            background-color: gray;
+        }
+        .color-buttons #yellow
+        {
+            background-color: yellow;
+        }

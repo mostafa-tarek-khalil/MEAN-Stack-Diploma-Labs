@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li id="home"><span class="material-symbols-outlined">home</span></li>
+            <li><span class="material-symbols-outlined">search</span></li>
+            <li><span class="material-symbols-outlined">mail</span></li>
+            <li><span class="material-symbols-outlined">globe</span></li>
+            <li id="delete"><span class="material-symbols-outlined">delete</span></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="chip">
+            <img src="Screenshot 2026-07-08 190524.png" alt="" id="image"
+                onclick="document.getElementById('close').style.width='130px'">
+            <div id="close">
+                <div id="content">
+                    Jane Row
+                </div>
+                <div id="x" onclick="document.getElementById('close').style.width='0px'">X</div>
+            </div>
+        </section>
+
+        <section id="fan">
+            <input type="radio" name="pp" id="on">
+            <input type="radio" name="pp" id="off" checked>
+            <input type="radio" name="s" id="s1">
+            <input type="radio" name="s" id="s2">
+            <input type="radio" name="s" id="s3">
+            <input type="checkbox" id="r">
+            <div id="fan-img">
+                <img src="./fan.png" alt="Fan">
+            </div>
+            <div id="controle">
+                <label class="fan-btn" for="on">ON</label>
+                <label class="fan-btn" for="off">OFF</label>
+                <label class="fan-btn" for="s1">1</label>
+                <label class="fan-btn" for="s2">2</label>
+                <label class="fan-btn" for="s3">3</label>
+                <label class="fan-btn" for="r">R</label>
+            </div>
+        </section>
+
+        <section id="heart">
+            <img src="./Screenshot 2026-07-08 194258.png" alt="">
+        </section>
+        <section class="face">
+            <svg viewBox="0 0 200 200" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
+                <g class="eyes">
+                    <circle cx="61" cy="82" r="12" />
+                    <circle cx="127" cy="82" r="12" />
+                </g>
+                <path d="m136.81 116.53c.69 26.17-64.11 42-81.52-.73"
+                    style="fill:none; stroke: black; stroke-width: 3;" />
+            </svg>
+            <div id="leye" class="c">Left eye</div>
+            <div id="reye" class="c">Right eye</div>
+            <div id="mouth" class="c">Mouth</div>
+        </section>
+
+        <section class="canvas">
+            <div class="counter">
+            <span id="count-number">0</span>
+            <div class="color-buttons">
+                <input type="button" id="red" onclick="document.getElementById('canv').style.backgroundColor='red'">
+                <input type="button" id="blue" onclick="document.getElementById('canv').style.backgroundColor='rgb(95, 95, 255)'">
+                <input type="button" id="gray" onclick="document.getElementById('canv').style.backgroundColor='gray'">
+                <input type="button" id="yellow" onclick="document.getElementById('canv').style.backgroundColor='yellow'">
+            </div>
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="canv"></canvas>
+                <div class="drop-zone" id="drop-zone"></div>
+            </div>
+            <input type="range" name="resize" id="resize" min="50" max="150" value="75"
+                oninput="document.querySelectorAll('.f').forEach(img => img.style.width=this.value+'px'); document.querySelectorAll('.f').forEach(img => img.style.height=this.value+'px')">
+            <label for="resize">images size</label>
+            <div id="imgs">
+                <img class="f" id="face1" draggable="true" src="./face1.png" alt="">
+                <img class="f" id="face2" draggable="true" src="./face2.png" alt="">
+                <img class="f" id="face3" draggable="true" src="./face3.png" alt="">
+                <img class="f" id="face4" draggable="true" src="./face4.png" alt="">
+                <img class="f" id="face5" draggable="true" src="./face5.png" alt="">
+                <img class="f" id="face6" draggable="true" src="./face6.png" alt="">
+            </div>
+        </section>
+
+    </main>
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const imgsContainer = document.getElementById('imgs');
+        const countNumber = document.getElementById('count-number');
+        let counter = 0;
+
+        document.querySelectorAll('#imgs img').forEach(img => {
+            img.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.id);
+            });
+        });
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            const imgId = e.dataTransfer.getData('text/plain');
+            const draggedImg = document.getElementById(imgId);
+
+            if (draggedImg && !dropZone.contains(draggedImg)) {
+                dropZone.appendChild(draggedImg);
+                counter++;
+                countNumber.textContent = counter;
+            }
+        });
+
+        document.body.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        document.body.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const imgId = e.dataTransfer.getData('text/plain');
+            const draggedImg = document.getElementById(imgId);
+
+            if (draggedImg && dropZone.contains(draggedImg)) {
+                imgsContainer.appendChild(draggedImg);
+                counter--;
+                countNumber.textContent = counter;
+            }
+        });
+    </script>
+</body>
+
+</html>
