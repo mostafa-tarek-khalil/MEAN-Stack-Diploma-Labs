@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form>
+        <h2>Contact</h2>
+        <label>Name</label>
+        <input type="text" required>
+        <br><br>
+        <label>Age</label>
+        <input type="number" min="18" max="60">
+        <br><br>
+        <label>Birthday</label>
+        <input type="date">
+        <br><br>
+        <label>Message</label>
+        <textarea rows="4" cols="20"></textarea>
+        <br><br>
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+    <h1 id="word">
+        <span style="color: green;">We</span><span style="color: red;">lc</span><span style="color: violet;">om</span><span style="color: rgb(231, 215, 41);">e</span>
+        to my website
+    </h1>
+    <span>Small:</span> <input type="range" onchange="word.style.fontSize=this.value+'px'"> <span>Large:</span>
+    <br><br>
+    <h2>FeedBack</h2>
+    <details>
+        <summary>Ahmed Elsayed</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi unde est repellat distinctio fugiat. Pariatur animi harum tempora, dolore vitae temporibus explicabo? Facilis quaerat nisi similique sint, magnam dolore veniam.
+    </details>
+    <br>
+    <details>
+        <summary>John Doe</summary>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eos. Explicabo aut voluptate sint reiciendis, suscipit tempore enim, ducimus reprehenderit odit libero, asperiores modi debitis adipisci. Recusandae incidunt repudiandae impedit.
+    </details>
+    <br>
+    <details>
+        <summary>Mostafa Tarek</summary>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis soluta quos odio suscipit commodi, atque debitis aut temporibus repellendus eius praesentium autem quas consectetur, corrupti maiores iure minima. Libero, nostrum?
+    </details>
+    <br><br>
+    <button id="help" onclick="modal.showModal()">Help</button>
+    <dialog id="modal">
+        <p>Modal Header</p>
+        <img src="./OIP.jfif">
+        <p>for more information visit <a href="https://google.com">google.com</a></p>
+        <p>Modal Footer</p>
+        <button onclick="modal.close()">X</button>
+    </dialog>
+    <br><br>
+    <video src="./4K Relaxing Nature Sounds - Short Video Clips of Nature.mp4" controls></video>
+</body>
+</html>
