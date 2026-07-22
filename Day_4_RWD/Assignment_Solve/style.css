@@ -1,0 +1,354 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .left {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        .right {
+            width: 74%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .top-mini-nav {
+            display: none;
+            justify-content: center;
+            gap: 12px;
+            font-size: 13px;
+            color: #00796b;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .top-mini-nav span {
+            cursor: pointer;
+        }
+
+        .right img,
+        .mcontnt img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo-container {
+            width: 110px;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .nav .elm {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        .nav .elm .material-symbols-outlined {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .nav .elm .content {
+            color: darkgreen;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .top-mini-nav,
+        .nav .more-text-icon,
+        .nav .menu-burger-icon {
+            display: none;
+        }
+
+        .twitter,
+        .face {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .btnn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: darkgreen;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            padding: 8px 12px;
+            width: fit-content;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: -5px;
+        }
+
+        .twitter-icon,
+        .facebook-icon {
+            width: 18px;
+            height: 18px;
+            fill: darkgreen;
+        }
+
+        h2 {
+            font-size: 14px;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            color: darkgreen;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #eee;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact .content {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            text-align: left;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .contact .npt {
+            display: flex;
+            gap: 10px;
+        }
+
+        .contact input[type="email"] {
+            height: 35px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 500px;
+            min-width: 120px;
+        }
+
+        .contact input[type="button"] {
+            height: 35px;
+            padding: 0 15px;
+            border: none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .more {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .mcontnt {
+            width: 24%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .mcontnt .desc {
+            margin-bottom: 10px;
+        }
+
+        .mcontnt .meta {
+            margin-top: auto;
+            font-size: 11px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+
+        footer .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .footer-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: #333;
+        }
+
+        @media (max-width: 950px) {
+            .row {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .left {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 15px;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .twitter,
+            .face {
+                display: none;
+            }
+
+            .nav {
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                width: auto;
+            }
+
+            .nav #portfolio,
+            .nav #about {
+                display: none;
+            }
+
+            .nav .more-text-icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2px;
+                cursor: pointer;
+            }
+
+            .nav .more-text-icon span {
+                color: black;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .nav .elm {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .nav .elm .content {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .nav .more-text-icon {
+                display: none;
+            }
+
+            .nav .menu-burger-icon {
+                display: block;
+                font-size: 35px;
+                color: green;
+                cursor: pointer;
+            }
+
+            .nav .material-symbols-outlined {
+                display: block;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .top-mini-nav {
+                display: flex;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .left {
+                justify-content: center;
+            }
+
+            .logo-container {
+                margin: 0 auto;
+            }
+
+            .contact {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .contact .npt {
+                width: 100%;
+            }
+
+            .contact input[type="email"] {
+                flex: 1;
+            }
+
+            .more {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .mcontnt {
+                width: 100%;
+            }
+
+        }
