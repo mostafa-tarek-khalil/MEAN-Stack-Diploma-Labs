@@ -1,0 +1,42 @@
+.item {
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+        }
+
+        .item:hover {
+            background-color: gray !important;
+            color: #000 !important;
+        }
+
+        .material-symbols-outlined {
+            font-size: 22px;
+        }
+
+        .t {
+            transition: all 0.2s ease;
+            cursor: pointer;
+            color: #435f7a;
+            text-decoration: none;
+            display: block;
+        }
+
+        .t:hover {
+            background-color: #3a5166 !important;
+            color: #fff !important;
+        }
+
+        .btn {
+            transition: all 0.2s ease;
+            cursor: pointer;
+            background-color: #435f7a !important;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn:hover {
+            background-color: gray !important;
+            color: black !important;
+        }
+    
