@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="bounce.js"></script>
+    <div
+        style="border: 2px solid rgb(220, 217, 217); border-radius: 8px; box-shadow: 1px 2px 2px gray; width: 850px; margin: 10px; padding: 10px;">
+        <h3 style="display: block; margin-top: 20px;">My Skills</h3>
+        <div class="tags-container">
+            <div class="tag">
+                <span>HTML</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>CSS</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>Javascript</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>C</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>C#</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>C++</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>Python</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>Node.js</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+            <div class="tag">
+                <span>PHP</span>
+                <span onclick='this.parentElement.style.display = "none";' class="btn">X</span>
+            </div>
+        </div>
+        <p>Add up to 5 skills. Reorder your skills by dragging tags to a new position. Remove skills by deleting tags.
+        </p>
+        <div>
+            <input type="button" value="Save"
+                style="background-color: green; color: white; border-radius: 8px; border-color: white; padding: 10px; cursor: pointer;">
+            <input type="button" value="Cancel"
+                style="background-color: white; color: green; border-radius: 8px; border-color: white; padding: 10px; cursor: pointer;">
+        </div>
+    </div>
+</body>
+
+</html>
