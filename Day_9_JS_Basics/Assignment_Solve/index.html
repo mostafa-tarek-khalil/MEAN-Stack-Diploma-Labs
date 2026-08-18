@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+</head>
+
+<body>
+    <form style="margin-top: 20px;">
+        <input type="text" pattern="^[a-zA-Z]{3,}([ ]{1,1}[a-zA-Z]{3,})+$" style="display: block;" required>
+        <br>
+        <button type="button" onclick="console.log(this.form.elements[0].checkValidity())"
+            style="margin-bottom: 30px;">send</button>
+    </form>
+    <form action="index2.html" onsubmit="return validate()">
+        <label>Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username here">
+        <br><br>
+        <label>Password</label>
+        <input type="text" id="password" name="password">
+        <br><br>
+        <button type="submit" onclick="">login</button>
+    </form>
+    <br><br>
+    <button onclick="openwin()">open</button>
+    <button onclick="closewin()">close</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
